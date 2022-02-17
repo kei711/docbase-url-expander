@@ -6,15 +6,28 @@
 - Yarn 1.x
 - direnv
 
-## Setup
+## Commands
+
+### Setup
 
 ```shell
 cp .env.sample .env
 direnv allow
 yarn
+```
 
+### Execute
+
+```shell
 # Run
 yarn run esbuild ./src/index.ts
+```
+
+### Docker
+
+```shell
+docker build -t docbase-url-expander .
+docker run --env-file .env -p 3000:3000 --rm docbase-url-expander
 ```
 
 ### ngrok
@@ -22,3 +35,7 @@ yarn run esbuild ./src/index.ts
 ```shell
 ngrok http 3000
 ```
+
+## License
+
+MIT
