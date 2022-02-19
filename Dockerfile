@@ -2,19 +2,28 @@ FROM node:16-alpine AS builder
 WORKDIR /app
 
 COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile --production=false
+RUN yarn install --non-interactive --frozen-lockfile
 
 COPY . .
 
 RUN yarn build
-RUN npm prune --production
-RUN yarn cache clean
 
-FROM node:16-alpine
+# ---
+
+FROM node:16-alpine AS node_modules
 WORKDIR /app
 
+COPY package.json yarn.lock ./
+RUN yarn install --non-interactive --frozen-lockfile --prod
+
+# ---
+
+FROM gcr.io/distroless/nodejs:16
+WORKDIR /app
+
+ENV NODE_ENV=production
 COPY --from=builder /app/dist .
-COPY --from=builder /app/node_modules ./node_modules
+COPY --from=node_modules /app/node_modules ./node_modules
 
 EXPOSE 3000
-CMD node ./index.js
+CMD ["./index.js"]
