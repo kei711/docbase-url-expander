@@ -1,6 +1,6 @@
-# Docbase Url Expander
+# DocBase Url Expander
 
-Slack bot for unfurling [Docbase](https://docbase.io) URLs.
+Slack bot for unfurling [DocBase](https://docbase.io) URLs.
 
 [![Latest Version](https://img.shields.io/github/v/release/kei711/docbase-url-expander)](https://github.com/kei711/docbase-url-expander/releases)
 [![Build](https://github.com/kei711/docbase-url-expander/actions/workflows/main.yml/badge.svg)](https://github.com/kei711/docbase-url-expander/actions/workflows/main.yml)
@@ -24,7 +24,7 @@ docker run --env-file .env --init --rm ghcr.io/kei711/docbase-url-expander:lates
 - DOCBASE_TEAM_NAME
   - `https://<DOCBASE_TEAM_NAME>.docbase.io`
 - DOCBASE_ACCESS_TOKEN
-  - Access token of Docbase
+  - Access token of DocBase
   - see [アクセストークン作成方法](https://help.docbase.io/posts/45703#%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E4%BD%9C%E6%88%90%E6%96%B9%E6%B3%95)
 
 ## For local development
