@@ -36,8 +36,7 @@ export class DocbaseClient {
       this.lruMap.set(id, post);
       return post;
     } catch (err) {
-      console.warn(err);
-      throw err;
+      return null;
     }
   }
 }
