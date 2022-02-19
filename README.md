@@ -59,4 +59,4 @@ docker run --env-file .env --init --rm docbase-url-expander
 
 ## License
 
-MIT
+[MIT](./LICENSE)
