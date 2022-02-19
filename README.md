@@ -2,6 +2,8 @@
 
 [![Build](https://github.com/kei711/docbase-url-expander/actions/workflows/main.yml/badge.svg)](https://github.com/kei711/docbase-url-expander/actions/workflows/main.yml)
 
+[GitHub Container Registry](https://github.com/kei711/docbase-url-expander/pkgs/container/docbase-url-expander)
+
 ## Prerequisite
 
 - Node.js 16.x
