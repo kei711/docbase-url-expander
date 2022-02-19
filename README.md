@@ -1,5 +1,7 @@
 # Docbase Url Expander
 
+[![Build](https://github.com/kei711/docbase-url-expander/actions/workflows/main.yml/badge.svg)](https://github.com/kei711/docbase-url-expander/actions/workflows/main.yml)
+
 ## Prerequisite
 
 - Node.js 16.x
