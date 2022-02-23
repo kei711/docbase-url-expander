@@ -6,7 +6,18 @@ import { DocbaseClient } from './DocbaseClient';
 const app = new App({
   socketMode: true,
   token: process.env.SLACK_BOT_TOKEN,
-  appToken: process.env.SLACK_APP_TOKEN
+  appToken: process.env.SLACK_APP_TOKEN,
+  port: process.env.PORT ? +process.env.PORT : 3000,
+  customRoutes: [
+    {
+      path: '/healthz',
+      method: ['GET'],
+      handler: (req, res) => {
+        res.writeHead(200);
+        res.end('OK');
+      },
+    },
+  ],
 });
 
 const docbase = new DocbaseClient();
