@@ -19,7 +19,7 @@
   "dependencies": {
     "@slack/bolt": "3.9.0",
     "axios": "0.26.0",
-    "dayjs": "1.10.7",
+    "dayjs": "1.10.8",
     "lru_map": "0.4.1"
   },
   "devDependencies": {
