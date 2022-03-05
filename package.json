@@ -17,7 +17,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@slack/bolt": "3.9.0",
+    "@slack/bolt": "3.10.0",
     "axios": "0.26.0",
     "dayjs": "1.10.8",
     "lru_map": "0.4.1"
