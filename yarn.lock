@@ -1955,10 +1955,10 @@ esbuild-netbsd-64@0.14.25:
   resolved "https://registry.yarnpkg.com/esbuild-netbsd-64/-/esbuild-netbsd-64-0.14.25.tgz#439fe27d8ee3b5887501ee63988e85f920107db6"
   integrity sha512-TKIVgNWLUOkr+Exrye70XTEE1lJjdQXdM4tAXRzfHE9iBA7LXWcNtVIuSnphTqpanPzTDFarF0yqq4kpbC6miA==
 
-esbuild-node-tsc@1.8.3:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/esbuild-node-tsc/-/esbuild-node-tsc-1.8.3.tgz#74f7b3ff54d93d8b5d8272e4df95c03c6a1cd988"
-  integrity sha512-0F4omJbhDIhfuU68N9qiOjWq7Nkf3J6owJwy0EmZdoRoBapKSoJ4+m0VZAjwksUUSx4drhtllurpjQizMAb6kA==
+esbuild-node-tsc@1.8.5:
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/esbuild-node-tsc/-/esbuild-node-tsc-1.8.5.tgz#d70aa78f7846ea22f4c29b12de3e4d16c596f6f4"
+  integrity sha512-WNM/h05W8ChBIoJ9W8E7x9k4vOKKuAh3YSAnZEDwLiUi99mEWw4wFO34mQFGwBv0nMabpj29qbhIm21N9u1U4Q==
   dependencies:
     cpy "^8.1.2"
     rimraf "^3.0.2"
