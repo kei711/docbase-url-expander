@@ -1,6 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>kei711/renovate-config"
+    ":semanticCommits",
+    ":timezone(Asia/Tokyo)",
+    "config:base"
+  ],
+  "dependencyDashboard": true,
+  "platformAutomerge": true,
+  "rebaseWhen": "auto",
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true
+    }
   ]
 }
