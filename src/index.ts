@@ -30,7 +30,9 @@ app.event('link_shared', async ({ event, client, logger }) => {
     const [, posts, postId] = new URL(link.url).pathname.split('/');
     logger.debug({ posts, postId });
 
-    const post = await docbase.fetchPost(postId);
+    const post = await docbase.fetchPost(postId).catch((e) => {
+      logger.error(e.message);
+    });
     logger.debug(post);
     if (!post) {
       // Not found
