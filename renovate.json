@@ -1,11 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    ":label(renovate)",
-    ":semanticCommits",
-    ":timezone(Asia/Tokyo)",
-    "config:base"
-  ],
+  "extends": [":label(renovate)", ":semanticCommits", ":timezone(Asia/Tokyo)", "config:base"],
   "dependencyDashboard": true,
   "platformAutomerge": true,
   "rebaseWhen": "auto",
