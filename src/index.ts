@@ -53,11 +53,15 @@ app.event('link_shared', async ({ event, client, logger }) => {
       footer: 'Tags: ' + post.tags.map((v) => v.name).join(', '),
       ts: dayjs(post.updated_at).unix().toString(),
     };
-    await client.chat.unfurl({
-      channel: event.channel,
-      ts: event.message_ts,
-      unfurls: { [post.url]: attachment },
-    });
+    await client.chat
+      .unfurl({
+        channel: event.channel,
+        ts: event.message_ts,
+        unfurls: { [post.url]: attachment },
+      })
+      .catch((e) => {
+        logger.error(e.message);
+      });
   }
 });
 
