@@ -30,7 +30,9 @@ app.event('link_shared', async ({ event, client, logger }) => {
     const [, posts, postId] = new URL(link.url).pathname.split('/');
     logger.debug({ posts, postId });
 
-    const post = await docbase.fetchPost(postId);
+    const post = await docbase.fetchPost(postId).catch((e) => {
+      logger.error(e.message);
+    });
     logger.debug(post);
     if (!post) {
       // Not found
@@ -53,11 +55,15 @@ app.event('link_shared', async ({ event, client, logger }) => {
       footer: 'Tags: ' + post.tags.map((v) => v.name).join(', '),
       ts: dayjs(post.updated_at).unix().toString(),
     };
-    await client.chat.unfurl({
-      channel: event.channel,
-      ts: event.message_ts,
-      unfurls: { [post.url]: attachment },
-    });
+    await client.chat
+      .unfurl({
+        channel: event.channel,
+        ts: event.message_ts,
+        unfurls: { [post.url]: attachment },
+      })
+      .catch((e) => {
+        logger.error(e.message);
+      });
   }
 });
 
