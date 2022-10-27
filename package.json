@@ -30,7 +30,7 @@
     "esbuild": "0.15.12",
     "esbuild-node-tsc": "2.0.4",
     "esbuild-register": "3.3.3",
-    "eslint": "8.23.1",
+    "eslint": "8.26.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
     "husky": "8.0.1",
